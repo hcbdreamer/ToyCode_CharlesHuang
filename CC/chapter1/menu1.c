@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 char * menu[] = {
 	"a - add new record",
 	"d - delete record",
@@ -22,7 +23,19 @@ int getchoice(char * greet, char * choices[])
 			option++;
 		}
 		selected = getchar();
+		printf("getchar result:%d\n", selected);
 		option = choices;
+		while(*option)
+		{
+			if (selected == *option[0]){
+				chosen = 1;
+				break;
+			}
+			option++;
+		}
+		if (!chosen){
+			printf("Incorrent choice, selest again\n");
+		}
 	}while(!chosen);
 	return selected;
 }
