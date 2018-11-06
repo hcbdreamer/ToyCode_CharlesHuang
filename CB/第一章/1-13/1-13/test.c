@@ -85,8 +85,6 @@ void Print_Vertical_Histogram(int wordlength[], int nw)
 	}
 	for (i = 0; i < nw; i++)
 	{
-		printf("%d", i + 1);
+		printf("%d ", i + 1);
 	}
 }
-
-
