@@ -1,3 +1,15 @@
-1-13
+2.1-13
 数组的初始化：
 不用一开始就用for循环去初始化，可以在程序执行过程中初始化；
+
+2.gitignore:
+（1）.gitignore创建：
+           touch .gitignore
+         note: 创建后，只有一个后缀为.gitignore的文件，不能重命名，否则会失去效果。
+          .gitignore的内容github上有官方统一文件https://github.com/github/gitignore.git
+（2）如何让github里面已经被版本管理的文件接受ignore的内容？
+         git rm -r --cached <files/folder>   #让该file/folder中的内容脱离版本控制；
+         git add . #重新添加文件到暂存区
+         git commit -m 'update github" #重新提交至工作区
+         git push
+        
